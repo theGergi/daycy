@@ -105,7 +105,6 @@
     text-align: center;
     line-height: 2.3rem;
     color: rgb(34, 36, 38);
-    border-color: rgba(34, 36, 38, 0.2);
     cursor: pointer;
     border-radius: 0.3rem;
 }
@@ -113,6 +112,13 @@
 .daycy.calendar > .grid > .row > .cell.range {
     background-color: #c4e2f9;
     border-color: rgba(34, 36, 38, 0.3);
+}
+
+.daycy.calendar > .grid > .row > .cell.current {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #2185d0;
+    line-height: calc(2.3rem - 2px);
 }
 
 .daycy.calendar > .grid > .row > .cell.selected {
@@ -157,6 +163,7 @@
 }
 
 .daycy.calendar > .grid > .row > .cell.hover {
+    border-color: rgba(34, 36, 38, 0.2);
     border-width: 1px;
     border-style: solid;
     line-height: calc(2.3rem - 2px);

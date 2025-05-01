@@ -172,14 +172,21 @@ export default class Calendar extends Component {
         const { value, month, hoverWeek, hoverDate } = this.state;
 
         const classes = ['cell', 'day'];
+        
+        const now = DateTime.local().startOf('day');
 
         if (i === 0) {
             classes.push('first');
         }
 
+        if (now && +date === +now) {
+            classes.push('current');
+        }
+
         if (value && +date === +value) {
             classes.push('selected');
         }
+
         if (
             highlightStart &&
             highlightEnd &&
